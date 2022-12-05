@@ -1,0 +1,63 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "GentseFeesten.StartUp/1.0.0": {
+        "dependencies": {
+          "Persistence": "1.0.0",
+          "Presentation": "1.0.0"
+        },
+        "runtime": {
+          "GentseFeesten.StartUp.dll": {}
+        }
+      },
+      "DomainController/1.0.0": {
+        "runtime": {
+          "DomainController.dll": {}
+        }
+      },
+      "Persistence/1.0.0": {
+        "dependencies": {
+          "DomainController": "1.0.0"
+        },
+        "runtime": {
+          "Persistence.dll": {}
+        }
+      },
+      "Presentation/1.0.0": {
+        "dependencies": {
+          "DomainController": "1.0.0"
+        },
+        "runtime": {
+          "Presentation.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GentseFeesten.StartUp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DomainController/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Persistence/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

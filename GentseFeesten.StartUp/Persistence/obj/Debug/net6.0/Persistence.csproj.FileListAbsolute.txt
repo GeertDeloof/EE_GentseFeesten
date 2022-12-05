@@ -1,0 +1,15 @@
+C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\GentseFeesten.StartUp\Persistence\bin\Debug\net6.0\Persistence.deps.json
+C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\GentseFeesten.StartUp\Persistence\bin\Debug\net6.0\Persistence.dll
+C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\GentseFeesten.StartUp\Persistence\bin\Debug\net6.0\Persistence.pdb
+C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\GentseFeesten.StartUp\Persistence\bin\Debug\net6.0\DomainController.dll
+C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\GentseFeesten.StartUp\Persistence\bin\Debug\net6.0\DomainController.pdb
+C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\GentseFeesten.StartUp\Persistence\obj\Debug\net6.0\Persistence.csproj.AssemblyReference.cache
+C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\GentseFeesten.StartUp\Persistence\obj\Debug\net6.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\GentseFeesten.StartUp\Persistence\obj\Debug\net6.0\Persistence.AssemblyInfoInputs.cache
+C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\GentseFeesten.StartUp\Persistence\obj\Debug\net6.0\Persistence.AssemblyInfo.cs
+C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\GentseFeesten.StartUp\Persistence\obj\Debug\net6.0\Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\GentseFeesten.StartUp\Persistence\obj\Debug\net6.0\Persistence.csproj.CopyComplete
+C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\GentseFeesten.StartUp\Persistence\obj\Debug\net6.0\Persistence.dll
+C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\GentseFeesten.StartUp\Persistence\obj\Debug\net6.0\refint\Persistence.dll
+C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\GentseFeesten.StartUp\Persistence\obj\Debug\net6.0\Persistence.pdb
+C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\GentseFeesten.StartUp\Persistence\obj\Debug\net6.0\ref\Persistence.dll
