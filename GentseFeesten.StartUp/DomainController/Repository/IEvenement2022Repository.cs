@@ -8,6 +8,7 @@ namespace DomainController.Repository
 {
     public interface IEvenement2022Repository
     {
-        public List<string> LoadCsv();
+        public Dictionary<string, string> LoadCsv();
+        public string GetEvenementByKey(string key);
     }
 }

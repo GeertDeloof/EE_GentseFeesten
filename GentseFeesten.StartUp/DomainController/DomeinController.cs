@@ -12,9 +12,13 @@ namespace DomainController
 
         }
 
-        public List<string> GetMapper2022()
+        public Dictionary<string, string>GetMapper2022()
         {
             return _repo2022.LoadCsv();
+        }
+        public string GetEvenementByKey(string key)
+        {
+            return _repo2022.GetEvenementByKey(key);
         }
     }
 }

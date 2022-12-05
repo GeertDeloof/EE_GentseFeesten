@@ -9,19 +9,27 @@ namespace Persistence
         // en verder  using (StreamReader reader = new StreamReader(Path.Combine(folder, file)))
         private const string file = "gentse-feesten-evenementen-2022.csv";
         private List<string> evenementLijst2022= new List<string>();
+        private Dictionary<string, string> evenemetDictionary = new();
 
-        public List<string> LoadCsv()
+        public Dictionary<string,string> LoadCsv()
         {
             using (StreamReader reader = new StreamReader(Path.Combine(folder, file)))
             {
                 while (!reader.EndOfStream)
                 {
-                    string line = reader.ReadLine();
-                    evenementLijst2022.Add(line);
+                    string lijn = reader.ReadLine();
+                    string[] parts = lijn.Split(";");
+                    evenemetDictionary[parts[0]] = lijn;
+                    //evenementLijst2022.Add(line);
                 }
             }
-            return evenementLijst2022;
+            return evenemetDictionary;
+            // "70332b26-5636-2e42-54bb-000000005514"  element 28xx
         }
 
+        public string GetEvenementByKey(string key)
+        {
+            return evenemetDictionary[key];   
+        }
     }
 }
