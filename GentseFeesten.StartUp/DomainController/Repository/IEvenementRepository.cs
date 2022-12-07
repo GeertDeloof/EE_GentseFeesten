@@ -11,5 +11,7 @@ namespace DomainController.Repository
     {
         public Dictionary<string, Evenement> LoadCsv();
         public Evenement GetEvenementByKey(string key);
+        public List<Evenement> MaakSubEvenementen(Evenement evnt);
+
     }
 }

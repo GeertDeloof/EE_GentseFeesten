@@ -12,37 +12,51 @@ namespace Persistence
         // en verder  using (StreamReader reader = new StreamReader(Path.Combine(folder, file)))
         private const string file = "gentse-feesten-evenementen-2022.csv";
         private Dictionary<string, Evenement> evenementDictionary = new();
-        CultureInfo cultureInfo = new CultureInfo("nl-BE");
 
         public Dictionary<string,Evenement> LoadCsv()
         {
                 using (StreamReader reader = new StreamReader(Path.Combine(folder, file)))
                 {
-                   List<string>? subLijst; 
                    while (!reader.EndOfStream)
                     {
                         string lijn = reader.ReadLine();
                         string[] subs = lijn.Split(";");
-                        Evenement gfe = MaakEvenement(lijn);
-                        evenementDictionary[subs[0]] = gfe;
-                        // subs 3 bevat ID van subevenementen: naar lijst - gebeurt nu in evenement
-                        //subLijst = !string.IsNullOrEmpty(subs[3]) ? GetSubEenementen(subs[3]) : null;
+                    Evenement gfe = new(lijn);
+                    evenementDictionary[subs[0]] = gfe;    
                     }
                 }
                 return evenementDictionary;                
             // "70332b26-5636-2e42-54bb-000000005514"  element  circa 3283
         }
 
-        private Evenement MaakEvenement(string rij)
-        {
-            Evenement gfe = new(rij);
-
-            return gfe;
-        }
-
         public Evenement GetEvenementByKey(string key)
         {
-            return evenementDictionary[key];   
+            if (evenementDictionary.ContainsKey(key))
+            {
+                return evenementDictionary[key];
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
+
+        public List<Evenement> MaakSubEvenementen(Evenement evnt)
+        {
+            List<Evenement> subLijst = new();
+            // Maak lijst met subevenementen
+            char[] separators = { ',' };
+            string [] subEvent = evnt.SubEvenementenString.Split(separators);
+            foreach (string s in subEvent)
+            {
+                if (s != "")
+                {
+                    subLijst.Add(GetEvenementByKey(s));
+                }
+            }
+            return subLijst;
         }
 
 
