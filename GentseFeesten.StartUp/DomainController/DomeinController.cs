@@ -1,24 +1,28 @@
-﻿using DomainController.Repository;
+﻿using DomainController.Model;
+using DomainController.Repository;
 
 namespace DomainController
 {
     public class DomeinController
     {
-        IEvenement2022Repository _repo2022;
+        IEvenementRepository _repoEvents;
 
-        public DomeinController(IEvenement2022Repository repo2022)
+        public DomeinController(IEvenementRepository repo)
         {
-            _repo2022 = repo2022;
+            _repoEvents = repo;
 
         }
 
-        public Dictionary<string, string>GetMapper2022()
+        public Dictionary<string, Evenement>GetMapper2022()
         {
-            return _repo2022.LoadCsv();
+            return _repoEvents.LoadCsv();
         }
-        public string GetEvenementByKey(string key)
+
+
+        public Evenement GetEvenementByKey(string key)
         {
-            return _repo2022.GetEvenementByKey(key);
+            return _repoEvents.GetEvenementByKey(key);
         }
+
     }
 }

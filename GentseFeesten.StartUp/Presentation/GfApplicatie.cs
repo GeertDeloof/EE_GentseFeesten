@@ -1,4 +1,5 @@
 ﻿using DomainController;
+using DomainController.Model;
 
 namespace Presentation
 {
@@ -9,28 +10,42 @@ namespace Presentation
         public GfApplicatie(DomeinController domainController)
         {
             dc = domainController;
-
+            Dictionary<string, Evenement> dict; 
             Console.WriteLine("Welkom bij de Gentse Feesten.");
-            Dictionary<string,string> dict = new Dictionary<string,string>(dc.GetMapper2022());
-
-            Console.WriteLine("Element \"70332b26-5636-2e42-54bb-000000005514\"");
-            Console.WriteLine(dc.GetEvenementByKey("70332b26-5636-2e42-54bb-000000005514"));
-            Console.WriteLine();
-            Thread.Sleep(10000);
-              
-            int teller = 1;
-            foreach(KeyValuePair<string,string> keyValue in dict)
+            try
             {
-                Console.WriteLine(teller.ToString());
-                Console.WriteLine(keyValue.Key.ToString());
-                Console.WriteLine();
-                Console.WriteLine(keyValue.Value);
-//                Console.WriteLine(string.Join("\n ", key.);
-                Console.WriteLine();
+                dict = new Dictionary<string, Evenement>(dc.GetMapper2022());
+            }
+            catch (FileNotFoundException ex)
+            {
+                string message = "Het bestand met de evenementen werd niet gevonden.\n\nRaadpleeg de systeembeheerder.";
+                Console.WriteLine(message);
+                Thread.Sleep(3000);
+                return ;
+            }
+            //catch (Exception ex)
+            //{
+            //    string message = "Er trad een onverwachte fout op. Raadpleeg de systeembeheerder. Dit is de foutboodschap \n \n";
+
+            //    Console.WriteLine(message + ex.Message);
+            //    return;
+            //}
+
+            Evenement e1 = dc.GetEvenementByKey("70332b26-5636-2e42-54bb-000000005514");
+            Console.WriteLine(e1);
+
+            int teller = 1;
+            foreach (KeyValuePair<string, Evenement> keyValue in dict)
+            {
+                if (teller > dict.Count-100 && teller < dict.Count)
+                {
+                    Console.WriteLine(keyValue.Value);
+                    Console.WriteLine();
+                }
 
                 teller++;
             }
-
+            Console.WriteLine($"\n\n Gentse feesten kent dit jaar {dict.Count} evenementen. Joepie!!!");
         }
     }
 }
