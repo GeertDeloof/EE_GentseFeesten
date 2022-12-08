@@ -24,10 +24,10 @@ namespace DomainController
             return _repoEvents.LoadCsv();
         }
 
-        //public void BewaarFavorieten(_repoFavo, folder)
-        //{
-
-        //}
+        public void BewaarFavorieten(Dictionary<string, Evenement> favoDict)
+        {
+            _repoFavo.BewaarFavorieten(favoDict);
+        }
 
         public Evenement GetEvenementByKey(string key)
         {
@@ -35,6 +35,11 @@ namespace DomainController
             evnt.SubEvenementenLijst = _repoEvents.MaakSubEvenementen(evnt);
             evnt.SuperEvenement = _repoEvents.GetEvenementByKey(evnt.superEvenementString);
             return evnt;
+        }
+
+        public Dictionary<string, Evenement> GetFavorieten()
+        {
+            return _repoFavo.GetFavorieten();
         }
 
 
