@@ -83,6 +83,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\Gebruiker\\source\\repos\\2023\\EE\\EE_GentseFeesten\\GentseFeesten.StartUp\\DomainController\\DomainController.csproj": {
+                "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\2023\\EE\\EE_GentseFeesten\\GentseFeesten.StartUp\\DomainController\\DomainController.csproj"
+              },
               "C:\\Users\\Gebruiker\\source\\repos\\2023\\EE\\EE_GentseFeesten\\GentseFeesten.StartUp\\Persistence\\Persistence.csproj": {
                 "projectPath": "C:\\Users\\Gebruiker\\source\\repos\\2023\\EE\\EE_GentseFeesten\\GentseFeesten.StartUp\\Persistence\\Persistence.csproj"
               },

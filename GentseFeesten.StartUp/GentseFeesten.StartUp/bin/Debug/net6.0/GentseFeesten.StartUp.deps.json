@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "GentseFeesten.StartUp/1.0.0": {
         "dependencies": {
+          "DomainController": "1.0.0",
           "Persistence": "1.0.0",
           "Presentation": "1.0.0"
         },

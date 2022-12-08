@@ -6,15 +6,17 @@ namespace DomainController
 {
     public class DomeinController
     {
-        IEvenementRepository _repoEvents;
-        IFavorietenRepository _repvoFavo;
+        private IEvenementRepository _repoEvents;
+        private IFavorietenRepository _repoFavo;
         public readonly CultureInfo cultureInfo = new CultureInfo("nl-BE");
+        public const string folder = @"C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\";
+
 
 
         public DomeinController(IEvenementRepository repo, IFavorietenRepository repvoFavo)
         {
             _repoEvents = repo;
-            _repvoFavo = repvoFavo;
+            _repoFavo = repvoFavo;
         }
 
         public Dictionary<string, Evenement>GetMapper2022()
@@ -22,6 +24,10 @@ namespace DomainController
             return _repoEvents.LoadCsv();
         }
 
+        //public void BewaarFavorieten(_repoFavo, folder)
+        //{
+
+        //}
 
         public Evenement GetEvenementByKey(string key)
         {
@@ -30,7 +36,8 @@ namespace DomainController
             evnt.SuperEvenement = _repoEvents.GetEvenementByKey(evnt.superEvenementString);
             return evnt;
         }
-            
+
+
 
 
     }

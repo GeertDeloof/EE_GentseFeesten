@@ -95,6 +95,12 @@ namespace DomainController.Model
             return tekst;
         }
 
+        public string MaakBewaarLijn()
+        {
+            return $"{ID};{StartDatum};{EindDatum};{SubEvenementenString};{superEvenementString};{EvenementBeschrijving};{EvenementNaam};{Prijs}\n";
+
+        }
+
 
     }
 }

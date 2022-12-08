@@ -10,7 +10,7 @@ namespace DomainController.Repository
     public interface IFavorietenRepository
     {
         public List<Evenement> GetFavorieten();
-        public void BewaarFavorieten()
+        public void BewaarFavorieten(Dictionary<string, Evenement> evnt, string folder)
 ;
     }
 }

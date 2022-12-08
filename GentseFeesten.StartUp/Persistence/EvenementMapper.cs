@@ -7,7 +7,7 @@ namespace Persistence
 {
     public class EvenementMapper2022 : IEvenementRepository
     {
-        private const string folder = @"C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\";
+        public const string folder = @"C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\";
         // Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
         // en verder  using (StreamReader reader = new StreamReader(Path.Combine(folder, file)))
         private const string file = "gentse-feesten-evenementen-2022.csv";

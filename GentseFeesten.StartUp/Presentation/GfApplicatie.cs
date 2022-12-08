@@ -13,7 +13,7 @@ namespace Presentation
         {
             dc = domainController;
             Dictionary<string, Evenement> dict; 
-            List<Evenement> favo;
+            Dictionary<string, Evenement> favo;
             Console.WriteLine("Welkom bij de Gentse Feesten.");
             try
             {
@@ -34,8 +34,9 @@ namespace Presentation
             //    Console.WriteLine(message + ex.Message);
             //    return;
             //}
+            string folder = @"C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\";
 
-            favo.ForEach(f => { Console.WriteLine(f); });
+            BewaarFavorieten(favo,folder);
 
             int teller = 0;
             foreach (KeyValuePair<string, Evenement> el in dict)
@@ -72,6 +73,11 @@ namespace Presentation
             }
             Console.WriteLine($"\n\n Gentse feesten kent dit jaar {dict.Count} evenementen. Joepie!!!");
 
+            Console.WriteLine("De favorieten");
+
+            favo.ToList().ForEach(f => { Console.WriteLine(f); });
+
+
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("Onder andere:");
@@ -84,16 +90,32 @@ namespace Presentation
             e1.SubEvenementenLijst.ForEach(e => Console.WriteLine("      " + e.EvenementNaam));
         }
 
-        public List<Evenement> TijelijkeFavorietenRepo()
+        public Dictionary<string, Evenement> TijelijkeFavorietenRepo()
         {
-            return new List<Evenement>()
+            Dictionary<string, Evenement> favoDict = new();
+            favoDict["fe7d82b7-2215-4d96-af61-533d9670e968"] = dc.GetEvenementByKey("fe7d82b7-2215-4d96-af61-533d9670e968");
+            favoDict["fe8cced0-3a85-4eaa-b27a-967cd5e75547"] = dc.GetEvenementByKey("fe8cced0-3a85-4eaa-b27a-967cd5e75547");
+            favoDict["fe8dc7c0-d4e0-4f88-9fed-6bbf501064eb"] = dc.GetEvenementByKey("fe8dc7c0-d4e0-4f88-9fed-6bbf501064eb");
+            favoDict["fea6c7a9-b1c9-b9cf-3f57-000000001248"]= dc.GetEvenementByKey("fea6c7a9-b1c9-b9cf-3f57-000000001248");
+            favoDict["feacd328-c0ee-2f1d-2dce-000000004488"] = dc.GetEvenementByKey("feacd328-c0ee-2f1d-2dce-000000004488");
+            return favoDict;
+        }
+
+        public void BewaarFavorieten(Dictionary<string, Evenement> favoDict, string folder)
+        {
+
+            string tekst = "";
+            foreach (KeyValuePair<string, Evenement> lijn in favoDict)
             {
-                dc.GetEvenementByKey("fe7d82b7-2215-4d96-af61-533d9670e968"),
-                dc.GetEvenementByKey("fe8cced0-3a85-4eaa-b27a-967cd5e75547"),
-                dc.GetEvenementByKey("fe8dc7c0-d4e0-4f88-9fed-6bbf501064eb"),
-                dc.GetEvenementByKey("fea6c7a9-b1c9-b9cf-3f57-000000001248"),
-                dc.GetEvenementByKey("feacd328-c0ee-2f1d-2dce-000000004488")
-            };
+
+                Evenement e = lijn.Value;
+                tekst += e.MaakBewaarLijn();
+            } 
+            using (StreamWriter gff = new StreamWriter(folder + "GebruikerFavorieten.csv"))
+                {
+                    gff.WriteLine(tekst);
+                }
+
         }
     }
 }
