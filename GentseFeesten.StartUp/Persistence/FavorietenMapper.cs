@@ -14,8 +14,8 @@ namespace Persistence
     {
 
         public const string folder = @"C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\";
-        public string favoBestand = "GebruikerFavorieten.csv";
-        private Dictionary<string, Evenement> evenementDictionary = new();
+        private string favoBestand = "GebruikerFavorieten.csv";
+        private Dictionary<string, Evenement> favorietenDictionary = new();
 
 
         public Dictionary<string, Evenement> GetFavorieten()
@@ -29,15 +29,15 @@ namespace Persistence
 
                     if (!string.IsNullOrEmpty(subs[0])) {
                          Evenement gfe = new(lijn);
-                        evenementDictionary[subs[0]] = gfe;
+                        favorietenDictionary[subs[0]] = gfe;
                     }
                     else
                     {
                         Console.WriteLine("Wacht");
                     }
                     }
-                    }
-                return evenementDictionary;
+                 }
+                return favorietenDictionary;
                 // "70332b26-5636-2e42-54bb-000000005514"  element  circa 3283
             }
 

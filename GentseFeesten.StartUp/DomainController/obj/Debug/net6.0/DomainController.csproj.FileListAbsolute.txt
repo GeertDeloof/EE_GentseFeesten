@@ -10,3 +10,15 @@ C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\GentseFeesten.StartUp\D
 C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\GentseFeesten.StartUp\DomainController\obj\Debug\net6.0\refint\DomainController.dll
 C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\GentseFeesten.StartUp\DomainController\obj\Debug\net6.0\DomainController.pdb
 C:\Users\Gebruiker\source\repos\2023\EE\EE_GentseFeesten\GentseFeesten.StartUp\DomainController\obj\Debug\net6.0\ref\DomainController.dll
+C:\Users\Gebruiker\Desktop\EE_GentseFeestenunzip\EE_GentseFeesten\GentseFeesten.StartUp\DomainController\bin\Debug\net6.0\DomainController.deps.json
+C:\Users\Gebruiker\Desktop\EE_GentseFeestenunzip\EE_GentseFeesten\GentseFeesten.StartUp\DomainController\bin\Debug\net6.0\DomainController.dll
+C:\Users\Gebruiker\Desktop\EE_GentseFeestenunzip\EE_GentseFeesten\GentseFeesten.StartUp\DomainController\bin\Debug\net6.0\DomainController.pdb
+C:\Users\Gebruiker\Desktop\EE_GentseFeestenunzip\EE_GentseFeesten\GentseFeesten.StartUp\DomainController\obj\Debug\net6.0\DomainController.csproj.AssemblyReference.cache
+C:\Users\Gebruiker\Desktop\EE_GentseFeestenunzip\EE_GentseFeesten\GentseFeesten.StartUp\DomainController\obj\Debug\net6.0\DomainController.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gebruiker\Desktop\EE_GentseFeestenunzip\EE_GentseFeesten\GentseFeesten.StartUp\DomainController\obj\Debug\net6.0\DomainController.AssemblyInfoInputs.cache
+C:\Users\Gebruiker\Desktop\EE_GentseFeestenunzip\EE_GentseFeesten\GentseFeesten.StartUp\DomainController\obj\Debug\net6.0\DomainController.AssemblyInfo.cs
+C:\Users\Gebruiker\Desktop\EE_GentseFeestenunzip\EE_GentseFeesten\GentseFeesten.StartUp\DomainController\obj\Debug\net6.0\DomainController.csproj.CoreCompileInputs.cache
+C:\Users\Gebruiker\Desktop\EE_GentseFeestenunzip\EE_GentseFeesten\GentseFeesten.StartUp\DomainController\obj\Debug\net6.0\DomainController.dll
+C:\Users\Gebruiker\Desktop\EE_GentseFeestenunzip\EE_GentseFeesten\GentseFeesten.StartUp\DomainController\obj\Debug\net6.0\refint\DomainController.dll
+C:\Users\Gebruiker\Desktop\EE_GentseFeestenunzip\EE_GentseFeesten\GentseFeesten.StartUp\DomainController\obj\Debug\net6.0\DomainController.pdb
+C:\Users\Gebruiker\Desktop\EE_GentseFeestenunzip\EE_GentseFeesten\GentseFeesten.StartUp\DomainController\obj\Debug\net6.0\ref\DomainController.dll

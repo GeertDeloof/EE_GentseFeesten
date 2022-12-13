@@ -33,7 +33,11 @@ namespace Persistence
         {
             if (evenementDictionary.ContainsKey(key))
             {
-                return evenementDictionary[key];
+                //return evenementDictionary[key];
+                Evenement evnt = evenementDictionary[key];
+                evnt.SubEvenementenLijst = MaakSubEvenementen(evnt);
+                evnt.SuperEvenement = evnt.SuperEvenement != null ? evenementDictionary[evnt.SuperEvenementString] : null;
+                return evnt;
             }
             else
             {
@@ -42,6 +46,7 @@ namespace Persistence
 
         }
 
+ 
 
         public List<Evenement> MaakSubEvenementen(Evenement evnt)
         {
@@ -57,6 +62,32 @@ namespace Persistence
                 }
             }
             return subLijst;
+        }
+
+        public List<Evenement> GeefEvenementenVanDeDag(DateTime datum)
+        {
+            List<Evenement> evenementLijst = new();
+            foreach(Evenement evnt in evenementDictionary.Values)
+            {
+                if (evnt.StartDatumEnUur.Equals(datum))
+                {
+                    evenementLijst.Add(evnt);
+                 };
+            }
+            return evenementLijst;
+        }
+
+        public List<Evenement> GeefEvenementenMetNaam(string naam)
+        {
+            List<Evenement> evenementLijst = new();
+            foreach (Evenement evnt in evenementDictionary.Values)
+            {
+                if (evnt.EvenementNaam.Equals(naam))
+                {
+                    evenementLijst.Add(evnt);
+                }
+            }
+            return evenementLijst;
         }
 
 
